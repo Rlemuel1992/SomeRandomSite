@@ -1,16 +1,46 @@
 <body>
     <audio id="dota" src="MYOSAK\Basshunter.mp3" type="audio/mp3" autoplay loop></audio>
-    <div onmouseover="dotaTime()">
-        <p>
-            ZOOMERS GET OUT!
-        </p>
-        <img src="Assets\Zoomers.gif">
+    <audio id="rocked" src="MYOSAK\hurricane.mp3" type="audio/mp3" autoplay loop></audio>
+    
+    <div id="eternalBattle">
+        <div id="Zoomer" onmouseover="dotaTime()">
+            <p>
+                Zoomies!
+            </p>
+            <img src="Assets\Zoomers.gif">
+        </div>
+
+        <div id='Boomer' onmouseover="hurricane()">
+            <p>
+                BOOMERS!
+            </p>
+            <img src="Assets\Boomers.gif">
+        </div>
     </div>
 </body>
 
 <script>
-    dotaTime(){
+    dotaTime() {
+        document.querySelector('#rocked').volume = 0;
         document.querySelector('#dota').volume = 1.0;
     }
 
+    hurricane() {
+        document.querySelector('#dota').volume = 0;
+        document.querySelector('#rocked').volume = 1.0;
+    }
+
 </script>
+
+<style>
+    #eternalBattle{
+        width: 80%;
+        align-content: center;
+    }
+    #Zoomer {
+        float:left;
+    }
+    #Boomer{
+        float:right;
+    }
+</style>
