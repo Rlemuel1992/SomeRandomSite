@@ -14,7 +14,7 @@
         <img src="Assets/Shalissa/Shalis6.jpg" alt="">
     </div>
     <div>
-        <img src="Assets/Shalissa/ShalisPanda.gif" alt="">
+        <img id="chonkPanda" src="Assets/Shalissa/ShalisPanda.gif" alt="">
     </div>
 </body>
 
@@ -25,16 +25,24 @@
         animation-iteration-count: infinite;
 
     }
-    #firstShalissa{
+
+    #firstShalissa {
         animation-name: skinnyShalis;
         animation-duration: 1s;
         animation-iteration-count: infinite;
     }
 
+    #chonkPanda {
+        width: 1000px;
+        padding-left: 20%;
+        padding-top: 10%;
+
+    }
+
     @keyframes bigShalis {
         0% {
             height: 120px;
-            transform:rotate(0deg);
+            transform: rotate(0deg);
         }
 
         50% {
@@ -43,19 +51,21 @@
 
         100% {
             height: 120px;
-            transform:rotate(720deg);
+            transform: rotate(720deg);
         }
     }
 
-    @keyframes skinnyShalis{
-        0%{
-            width:400px;
+    @keyframes skinnyShalis {
+        0% {
+            width: 400px;
         }
-        50%{
+
+        50% {
             width: 1000px;
         }
-        100%{
-            width:400px;
+
+        100% {
+            width: 400px;
         }
     }
 </style>
