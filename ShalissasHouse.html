@@ -2,7 +2,7 @@
     <audio src="MYOSAK/Shalissa.mp3" type="audio/mp3" autoplay loop></audio>
     <div>
         <p>Welcome to Heaven.</p>
-        <img src="Assets/Shalissa/Shalis1.jpg" alt="">
+        <img id="firstShalissa" src="Assets/Shalissa/Shalis1.jpg" alt="">
         <img id="smallShalis" src="Assets/Shalissa/Shalis2.jpg" alt="">
     </div>
     <div>
@@ -22,6 +22,11 @@
         animation-iteration-count: infinite;
 
     }
+    #firstShalissa{
+        animation-name: skinnyShalis;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
 
     @keyframes bigShalis {
         0% {
@@ -36,6 +41,18 @@
         100% {
             height: 120px;
             transform:rotate(720deg);
+        }
+    }
+
+    @keyframes skinnyShalis{
+        0%{
+            width:400px;
+        }
+        50%{
+            width: 1000px;
+        }
+        100%{
+            width:400px;
         }
     }
 </style>
